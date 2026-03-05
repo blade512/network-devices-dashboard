@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Scanner Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Ambient Background -->
+    <div class="background-animation">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div>
+                <h1>System Status</h1>
+                <p id="last-updated">Waiting for initial scan...</p>
+            </div>
+            <!-- Settings button removed: Backend auto-discovery handles endpoints -->
+        </header>
+
+        <main class="dashboard-grid" id="dashboard-grid">
+            <div class="loading">Discovering services on the network...</div>
+        </main>
+    </div>
+
+    <!-- Template for Service Tile -->
+    <template id="tile-template">
+        <a class="service-tile" href="#" target="_blank" data-status="unknown">
+            <div class="glass-reflection"></div>
+            <div class="tile-header">
+                <span class="material-icons service-icon">api</span>
+                <div>
+                    <button class="hide-btn" title="Hide this service" aria-label="Hide service">
+                        <span class="material-icons">visibility_off</span>
+                    </button>
+                    <div class="status-indicator"></div>
+                </div>
+            </div>
+            <div class="tile-body">
+                <div class="service-name">Service Name</div>
+                <div class="service-details">
+                    <span class="uptime">--% uptime (24h)</span>
+                    <span class="latency">--</span>
+                </div>
+            </div>
+        </a>
+    </template>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
