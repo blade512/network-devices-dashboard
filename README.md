@@ -29,7 +29,7 @@ This project automatically sweeps your local subnets, discovers active endpoints
 
 1. Clone the repository:
    ```bash
-   git clone <your-github-repo-url>
+   git clone https://github.com/blade512/network-devices-dashboard
    cd network-scanner
    ```
 
