@@ -13,10 +13,16 @@
   "dependencies": {
     "cors": "^2.8.6",
     "express": "^5.2.1",
-    "network-interfaces": "^1.1.0",
-    "nodemon": "^3.1.14",
     "ping": "^1.0.0",
     "portscanner": "^2.2.0",
     "sqlite3": "^5.1.7"
+  },
+  "pnpm": {
+    "overrides": {
+      "sqlite3>tar": "7.5.10",
+      "node-gyp>tar": "7.5.10",
+      "cacache>tar":  "7.5.10",
+      "http-proxy-agent>@tootallnate/once": "3.0.1"
+    }
   }
 }
